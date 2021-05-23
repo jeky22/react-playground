@@ -1,70 +1,28 @@
-# Getting Started with Create React App
+### 제출 동작 실행에 대한 설명
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- initialize 패키지 이외에 적용한 패키지는 `node-sass` 뿐입니다.
+- 실행 방법
 
-## Available Scripts
+```
+// Project setup
+npm install
 
-In the project directory, you can run:
+// Compiles for development
+npm run start
 
-### `yarn start`
+// Compiles and minifies for production
+npm run build
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 본인이 생각하는 가장 좋은 구조와 개선 방안
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+#### 개선 방향
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- http통신 적용하여 실제 데이터 통신구현
+  - 데이터 양을 보고 로딩방식에 대해 생각해볼 필요가 있을것 같다 (무한스크롤, 페이지네이션)
+- semantic한 웹 태그 적용
+  - 태그를 대부분 div로 개발하였기 때문에 추후에 SEO적용에 불리할것 같다
+- redux와 같은 상태관리도구를 이용하여 컴포넌트간의 통신에 적용
+  - 프로젝트가 커짐에 때라 데이터간의 통신이 더 복잡해질것 같다
+- scss 파일 세분화 필요
+  - scss 파일이 지금은 하나의 파일로 뭉쳐져 있는데 추후에 파일별로 쪼개어 관리하는게 나을것 같다

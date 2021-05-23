@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  background-color: #f5f5f5;
+  .section-title {
+    font-family: Noto Sans KR;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    text-align: center;
+    height: 48px;
+    background: #ffffff;
+    margin: 0 4px 4px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .section-subtitle {
+    padding-left: 25px;
+  }
+  .problem {
+    flex: 0 0 50%;
+    .section-title {
+      padding-left: 24px;
+      justify-content: flex-start;
+    }
+  }
+  .similars {
+    flex-grow: 1;
+    .place-holder {
+      width: 100%;
+      background-color: #ffffff;
+      height: 100%;
+      line-height: 28px;
+      .sticky {
+        .btn {
+          border: 1px solid #e0e0e0;
+          background-color: #ffffff;
+          border-radius: 2px;
+          font-size: 12px;
+          font-weight: 700;
+          padding: 4px 11px;
+          color: #00abff;
+        }
+        position: sticky;
+        text-align: center;
+        right: 10%; /* 창에서 오른쪽 길이 */
+        top: 50%; /* 창에서 위에서 부터의 높이 */
+        background-color: transparent;
+        margin: 0;
+        color: #9f9f9f;
+      }
+    }
+  }
+}
+.card {
+  background-color: white;
+  margin: 4px;
+  display: flex;
+  flex-direction: column;
+  font-family: Noto Sans KR;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0px;
+  text-align: left;
+  padding: 15px 30px;
+
+  .header {
+    padding: 7px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px #f5f5f5 solid;
+    .type {
+      flex: 0 0 43px;
+      color: #9f9f9f;
+    }
+    .title {
+      width: 100%;
+      flex-grow: 1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    button {
+      cursor: pointer;
+      flex: 0 0 80px;
+      height: 36px;
+      background: #ffffff;
+      border: 1px solid #e0e0e0;
+      box-sizing: border-box;
+      border-radius: 2px;
+      color: #00abff;
+      font-weight: bold;
+    }
+    .active {
+      background-color: #00abff;
+      color: #ffffff;
+    }
+  }
+  .body {
+    display: flex;
+    padding: 20px 7px;
+    .index {
+      flex: 0 0 43px;
+      text-align: center;
+      font-family: Noto Sans KR;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 35px;
+      color: #02c7f2;
+    }
+  }
+}
